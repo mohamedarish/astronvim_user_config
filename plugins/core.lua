@@ -24,34 +24,34 @@ return {
       dashboard.section.header.opts.hl = "AlphaShortcut"
       dashboard.section.buttons.opts.hl = "AlphaButtons"
 
-      local width = 50
-      local height = 24 -- two pixels per vertical space
-      dashboard.section.terminal.command = "cat | " .. os.getenv "HOME" .. "/.config/nvim/lua/user/art/neco2.sh"
-      dashboard.section.terminal.width = width
-      dashboard.section.terminal.height = height
-      dashboard.section.terminal.opts.redraw = true
+      -- local width = 50
+      -- local height = 24 -- two pixels per vertical space
+      -- dashboard.section.terminal.command = "cat | " .. os.getenv "HOME" .. "/.config/nvim/lua/user/art/neco2.sh"
+      -- dashboard.section.terminal.width = width
+      -- dashboard.section.terminal.height = height
+      -- dashboard.section.terminal.opts.redraw = true
 
       dashboard.section.header.val = {
-        "⠀⠀⠀⠀⡜⠈⠚⠁⣬⠓⠒⢼⠅⠀⠀⠀⣠⡇⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⡀⢹⠀⠸⡄⠀⠀                                                             ⣿⣿⣷⡝⡎⡎⣕⢅⢧⢿⡽⣞⡾⢯⣟⣽⢽⡳⡏⡾⡱⢷⣧⡛⣬⣭⣷⣵⣫⢟⣞⣿⣿⣿⣿⣿⣿",
-        "⠀⠀⠀⡸⠀⠀⠀⠘⢸⢀⠐⢃⠀⠀⠀⡰⠋⡇⠀⠀⠀⢠⠀⠀⡿⣆⠀⠀⣧⡈⡇⠆⢻⠀⠀  ███╗   ██╗███████╗██  ╔██╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ⣿⣿⣿⣿⢵⡹⡢⣃⣯⢯⡯⣷⢋⣟⠮⣞⣏⣪⣗⢕⢱⣫⣾⣇⠈⣿⣿⣿⣿⣿⢵⡫⣟⣿⣿⣿⣿",
-        "⠀⠀⢰⠃⠀⠀⢀⡇⠼⠉⠀⢸⡤⠤⣶⡖⠒⠺⢄⡀⢀⠎⡆⣸⣥⠬⠧⢴⣿⠉⠁⠸⡀⣇⠀  ████╗  ██║██╔════╝██ ╔██╝ ██╔═══██╗██║   ██║██║████╗ ████║ ⣿⣿⣿⣿⣿⡽⣞⣦⢯⡯⣯⢣⣪⡆⠙⣿⣿⣿⣿⣷⣟⣿⣿⣿⡄⢸⣿⣿⣿⡿⡙⢷⢮⣎⣻⣿⣿",
-        "⠀⠀⠇⠀⠀⠀⢸⠀⠀⠀⣰⠋⠀⢸⣿⣿⠀⠀⠀⠙⢧⡴⢹⣿⣿⠀⠀⠀⠈⣆⠀⠀⢧⢹⡄  ██╔██╗ ██║█████╗  █████╗  ██║   ██║██║   ██║██║██╔████╔██║ ⣿⣿⣿⣿⡿⡽⡋⡢⡿⣽⢣⢱⣿⣷⠀⠘⣿⣿⣿⣿⡿⣾⣟⡿⣿⣼⢿⣟⣿⠰⡑⡍⢯⢿⣿⣿⣿",
-        "⠀⣸⠀⢠⠀⠀⢸⡀⠀⠀⢻⡀⠀⢸⣿⣿⠀⠀⠀⠀⡼⣇⢸⣿⣿⠀⠀⠀⢀⠏⠀⠀⢸⠀⠇  ██║╚██╗██║██╔══╝  ██ ╚██╗ ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ⣿⣿⣿⣿⣹⣼⡧⡱⡿⡝⢔⢹⣿⣿⣧⡀⣿⣿⡿⣻⣾⣿⣽⣟⣿⣺⣿⣽⡏⢎⣬⡊⡆⡻⣿⣿⣿",
-        "⠀⠓⠈⢃⠀⠀⠀⡇⠀⠀⠀⣗⠦⣀⣿⡇⠀⣀⠤⠊⠀⠈⠺⢿⣃⣀⠤⠔⢸⠀⠀⠀⣼⠑⢼  ██║ ╚████║███████╗██╗ ╚██╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ⣿⣿⣿⣿⣿⣿⣇⣾⣯⣮⣼⣐⢍⢻⢻⣷⣽⣷⣟⢿⣻⣾⣺⣽⣯⣾⢿⢞⢜⠔⢼⣿⣷⣮⣿⣿⣿",
-        "⠀⠀⠀⢸⡀⣀⣾⣷⡀⠀⢸⣯⣦⡀⠀⠀⠀⢇⣀⣀⠐⠦⣀⠘⠀⠀⢀⣰⣿⣄⠀⠀⡟⠀⠀  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ⣿⣿⣿⣿⣿⢿⣽⡷⣿⢾⣻⣿⢷⡡⡣⢫⢳⢿⣽⡿⣷⣟⣯⣿⡾⣻⡑⢽⣷⣧⣹⣿⣿⣿⣿⣿⣿",
-        "⠀⠀⠀⠀⠛⠁⣿⣿⣧⠀⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣴⣿⣿⡿⠈⠢⣼⡇⠀⠀                                                             ⣿⣿⣿⣿⣟⣿⣽⢿⣻⣿⣻⣽⣿⡇⢎⣮⡢⡣⡩⡝⣝⣭⣹⣲⣮⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+        "                                                    ",
+        " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+        " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+        " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+        " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+        " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+        " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+        "                                                    ",
       }
 
-      dashboard.config.layout = {
-        { type = "padding", val = 1 },
-        dashboard.section.terminal,
-        { type = "padding", val = height / 6 },
-        dashboard.section.header,
-        { type = "padding", val = 1 },
-        dashboard.section.buttons,
-        { type = "padding", val = 1 },
-        dashboard.section.footer,
-      }
+      -- dashboard.config.layout = {
+      --   { type = "padding", val = 1 },
+      --   dashboard.section.terminal,
+      --   { type = "padding", val = height / 6 },
+      --   dashboard.section.header,
+      --   { type = "padding", val = 1 },
+      --   dashboard.section.buttons,
+      --   { type = "padding", val = 1 },
+      --   dashboard.section.footer,
+      -- }
 
       return dashboard
     end,
