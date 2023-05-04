@@ -22,4 +22,47 @@ return {
     config = true,
     event = { "BufEnter" },
   },
+  -- Themes
+  {
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "rmehri01/onenord.nvim",
+    name = "onenord",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+    name = "nordic",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "olivercederborg/poimandres.nvim",
+    name = "poimandres",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "lunarvim/horizon.nvim",
+    name = "horizon",
+    opts = {},
+    lazy = false,
+  },
 }
