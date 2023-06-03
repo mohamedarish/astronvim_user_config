@@ -6,23 +6,23 @@ return {
       require "alpha"
       require "alpha.term"
       local dashboard = require "alpha.themes.dashboard"
-      dashboard.section.buttons.val = {
-        dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
-        dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
-        dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
-        dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
-        dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
-        dashboard.button("s", "勒" .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
-        dashboard.button("l", "鈴" .. " Lazy", ":Lazy<CR>"),
-        dashboard.button("q", " " .. " Quit", ":qa<CR>"),
-      }
-      for _, button in ipairs(dashboard.section.buttons.val) do
-        button.opts.hl = "AlphaButtons"
-        button.opts.hl_shortcut = "AlphaShortcut"
-      end
-      dashboard.section.footer.opts.hl = "Type"
-      dashboard.section.header.opts.hl = "AlphaShortcut"
-      dashboard.section.buttons.opts.hl = "AlphaButtons"
+      -- dashboard.section.buttons.val = {
+      --   dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
+      --   dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
+      --   dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
+      --   dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
+      --   dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
+      --   dashboard.button("s", "勒" .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
+      --   dashboard.button("l", "鈴" .. " Lazy", ":Lazy<CR>"),
+      --   dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+      -- }
+      -- for _, button in ipairs(dashboard.section.buttons.val) do
+      --   button.opts.hl = "AlphaButtons"
+      --   button.opts.hl_shortcut = "AlphaShortcut"
+      -- end
+      -- dashboard.section.footer.opts.hl = "Type"
+      -- dashboard.section.header.opts.hl = "AlphaShortcut"
+      -- dashboard.section.buttons.opts.hl = "AlphaButtons"
 
       -- local width = 50
       -- local height = 24 -- two pixels per vertical space
@@ -31,15 +31,47 @@ return {
       -- dashboard.section.terminal.height = height
       -- dashboard.section.terminal.opts.redraw = true
 
+      -- dashboard.section.header.val = {
+      --   -- "                                                    ",
+      --   -- " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+      --   -- " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+      --   -- " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+      --   -- " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+      --   -- " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+      --   -- " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+      --   -- "                                                    ",
+      --   " █████  ███████ ████████ ██████   ██████",
+      --   "██   ██ ██         ██    ██   ██ ██    ██",
+      --   "███████ ███████    ██    ██████  ██    ██",
+      --   "██   ██      ██    ██    ██   ██ ██    ██",
+      --   "██   ██ ███████    ██    ██   ██  ██████",
+      --   " ",
+      --   "    ███    ██ ██    ██ ██ ███    ███",
+      --   "    ████   ██ ██    ██ ██ ████  ████",
+      --   "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+      --   "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+      --   "    ██   ████   ████   ██ ██      ██",
+      -- }
+
+      -- Set header
       dashboard.section.header.val = {
-        "                                                    ",
-        " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-        " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-        " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-        " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-        " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-        " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-        "                                                    ",
+        "                                                     ",
+        "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+        "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+        "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+        "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+        "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+        "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+        "                                                     ",
+      }
+
+      -- Set menu
+      dashboard.section.buttons.val = {
+        dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
+        dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
+        dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
+        dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h/lua/user"),
+        dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
       }
 
       -- dashboard.config.layout = {
